@@ -7,13 +7,18 @@ import java.util.Locale;
 
 public class ArrayUtils {
 
+    /**
+     * Набор функций для работы с массивами
+     *
+     * @author Дмитрий Соломатин (кафедра ПиИТ ФКН ВГУ)
+     */
+
     public static int[] toPrimitive(Integer[] arr) {
         if (arr == null) {
             return null;
         }
         int[] result = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            // автоматическая распаковка из объекта
             result[i] = arr[i];
         }
         return result;
@@ -28,9 +33,7 @@ public class ArrayUtils {
             list.add(scanner.nextInt());
         }
 
-        // из List<Integer> можно получить Integer[]
         Integer[] arr = list.toArray(new Integer[0]);
-        // Integer[] -> int[]
         return ArrayUtils.toPrimitive(arr);
     }
 
@@ -43,7 +46,7 @@ public class ArrayUtils {
                 return toIntArray(line);
             }
             catch(Exception e) {
-                System.out.print("Вы ошиблись, попробуйте еще раз! ");
+                System.out.print("You made a mistake, try again! ");
             }
         }
     }
