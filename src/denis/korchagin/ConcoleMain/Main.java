@@ -54,5 +54,4 @@ public class Main {
             System.out.print(arr[i]);
         }
     }
-
 }

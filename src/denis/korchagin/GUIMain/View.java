@@ -20,6 +20,7 @@ public class View  extends JFrame {
         Dimension dimension = toolkit.getScreenSize();
         setBounds(dimension.width / 2 - 210, dimension.height / 2 - 40, 420, 80);
         pack();
+
         this.buttonCalc.addActionListener(new buttonCalcController(textFieldArray, textFieldSum));
     }
 }
