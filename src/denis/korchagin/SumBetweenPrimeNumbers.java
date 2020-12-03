@@ -1,6 +1,6 @@
 package denis.korchagin;
 
-public class Logic {
+public class SumBetweenPrimeNumbers {
     public static int calcSumBetweenPrimeNumbers(int[] arr) {
         int sum = 0;
         int numberFirstPrimeMember = arr.length;

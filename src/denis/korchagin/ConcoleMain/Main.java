@@ -1,7 +1,7 @@
 package denis.korchagin.ConcoleMain;
 
 import denis.korchagin.utils.ArrayUtils;
-import denis.korchagin.Logic;
+import denis.korchagin.SumBetweenPrimeNumbers;
 
 public class Main {
 
@@ -10,7 +10,7 @@ public class Main {
         boolean testsPassed = runTests();
         if (testsPassed) {
             int[] arr = ArrayUtils.readIntArrayFromConsole();
-            System.out.printf("Sum between first and last prime numbers = %d\n", Logic.calcSumBetweenPrimeNumbers(arr));
+            System.out.printf("Sum between first and last prime numbers = %d\n", SumBetweenPrimeNumbers.calcSumBetweenPrimeNumbers(arr));
         }
     }
 
@@ -30,7 +30,7 @@ public class Main {
 
         boolean result = true;
         for (int i = 0; i < testsArr.length; i++) {
-            if (Logic.calcSumBetweenPrimeNumbers(testsArr[i].getTestArr()) == testsArr[i].getCurrentResult()) {
+            if (SumBetweenPrimeNumbers.calcSumBetweenPrimeNumbers(testsArr[i].getTestArr()) == testsArr[i].getCurrentResult()) {
                 printTest(testsArr, i, "correct");
             } else {
                 printTest(testsArr, i, "incorrect");

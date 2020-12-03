@@ -3,7 +3,7 @@ package denis.korchagin.GUIMain;
 import javax.swing.*;
 import java.awt.*;
 
-public class View  extends JFrame {
+public class FrameMain extends JFrame {
     private JButton buttonCalc;
     private JPanel mainPanel;
     private JTextField textFieldArray;
@@ -11,8 +11,8 @@ public class View  extends JFrame {
     private JLabel labelArray;
     private JLabel labelSum;
 
-    public View() {
-        super("Program");
+    public FrameMain() {
+        super("Task 7");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
         setVisible(true);
@@ -21,6 +21,6 @@ public class View  extends JFrame {
         setBounds(dimension.width / 2 - 210, dimension.height / 2 - 40, 420, 80);
         pack();
 
-        this.buttonCalc.addActionListener(new buttonCalcController(textFieldArray, textFieldSum));
+        this.buttonCalc.addActionListener(new ListenerButtonCalc(textFieldArray, textFieldSum));
     }
 }
