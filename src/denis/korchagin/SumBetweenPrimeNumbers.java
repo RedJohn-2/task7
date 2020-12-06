@@ -13,11 +13,15 @@ public class SumBetweenPrimeNumbers {
                 sum += sumBetweenPrimeNumbers;
                 sumBetweenPrimeNumbers = 0;
             }
-            if (arr[i] % 2 == 0 && i > numberFirstPrimeMember) {
+            if (isEvenNumber(arr[i]) && i > numberFirstPrimeMember) {
                 sumBetweenPrimeNumbers += arr[i];
             }
         }
         return sum;
+    }
+
+    public static boolean isEvenNumber(int n) {
+        return n % 2 == 0;
     }
 
     public static boolean isPrimeNumber(int n) {
